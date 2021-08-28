@@ -13,13 +13,14 @@ import com.example.harest.R;
 import com.example.harest.model.StateModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class StatesListAdapter extends RecyclerView.Adapter<StatesListAdapter.StatesViewHolder> {
 
     private Context context;
-    private ArrayList<StateModel> stateModelArrayList;
+    private List<StateModel> stateModelArrayList;
 
-    public StatesListAdapter(Context context, ArrayList<StateModel> stateModelArrayList) {
+    public StatesListAdapter(Context context, List<StateModel> stateModelArrayList) {
         this.context = context;
         this.stateModelArrayList = stateModelArrayList;
     }
