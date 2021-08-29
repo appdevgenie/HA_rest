@@ -42,7 +42,18 @@ public class StatesListAdapter extends RecyclerView.Adapter<StatesListAdapter.St
 
     @Override
     public int getItemCount() {
-        return stateModelArrayList.size();
+        if(stateModelArrayList == null){
+            return 0;
+        }else {
+            return stateModelArrayList.size();
+        }
+    }
+
+    public void updateStates(List<StateModel> newStatesList){
+        stateModelArrayList.clear();
+        //stateModelArrayList.addAll(newStates);
+        stateModelArrayList = newStatesList;
+        notifyDataSetChanged();
     }
 
     public class StatesViewHolder extends RecyclerView.ViewHolder{

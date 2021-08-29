@@ -1,9 +1,20 @@
 package com.example.harest.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class StateModel {
 
+    @SerializedName("entity_id")
+    @Expose
     private String entity_id;
+
+    @SerializedName("last_changed")
+    @Expose
     private String last_changed;
+
+    @SerializedName("state")
+    @Expose
     private String state;
 
     public StateModel() {
